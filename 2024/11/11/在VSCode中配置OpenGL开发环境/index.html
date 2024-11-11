@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+        <link rel="shortcut icon" href="/images/eh.ico">
+    
+    
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/eh.ico">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/eh.ico">
+    
+    
+    
+
+
+    <!-- meta -->
+
+
+<title>post | Arrowiii</title>
+
+
+    <meta name="keywords" content="OpenGL">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="在VSCode中配置OpenGL开发环境对于需要摆脱臃肿的Visual Studio的开发者而言，VSCode是更好的选择。 1. 安装 MinGW 和配置环境变量如果还未安装 MinGW，首先需要下载安装并配置好编译器：  下载并安装 MinGW（推荐使用 MinGW-w64 以获取更完整的支持）。 将 MinGW 的 bin 文件夹路径添加到系统 Path 环境变量中。  2. 安装 Open">
+<meta property="og:type" content="article">
+<meta property="og:title" content="post">
+<meta property="og:url" content="http://arrowiii.github.io/2024/11/11/%E5%9C%A8VSCode%E4%B8%AD%E9%85%8D%E7%BD%AEOpenGL%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html">
+<meta property="og:site_name" content="Arrowiii">
+<meta property="og:description" content="在VSCode中配置OpenGL开发环境对于需要摆脱臃肿的Visual Studio的开发者而言，VSCode是更好的选择。 1. 安装 MinGW 和配置环境变量如果还未安装 MinGW，首先需要下载安装并配置好编译器：  下载并安装 MinGW（推荐使用 MinGW-w64 以获取更完整的支持）。 将 MinGW 的 bin 文件夹路径添加到系统 Path 环境变量中。  2. 安装 Open">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://arrowiii.github.io/images/clock.png">
+<meta property="article:published_time" content="2024-11-11T07:25:12.000Z">
+<meta property="article:modified_time" content="2024-11-11T07:40:09.936Z">
+<meta property="article:author" content="Arrowiii">
+<meta property="article:tag" content="OpenGL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://arrowiii.github.io/images/clock.png">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+    
+
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <div id="app" tabindex="-1">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">BH2XMF</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        post
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2024/11/" class="post-meta__date button">2024-11-11</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header">
+     
+     
+    
+        <div class="post-thumbnail" style="background-image: url('/images/clock.png');"></div>
+    
+</div>
+    <div class="post__content">
+        <h1 id="在VSCode中配置OpenGL开发环境"><a href="#在VSCode中配置OpenGL开发环境" class="headerlink" title="在VSCode中配置OpenGL开发环境"></a>在VSCode中配置OpenGL开发环境</h1><p>对于需要摆脱臃肿的Visual Studio的开发者而言，VSCode是更好的选择。</p>
+<h3 id="1-安装-MinGW-和配置环境变量"><a href="#1-安装-MinGW-和配置环境变量" class="headerlink" title="1. 安装 MinGW 和配置环境变量"></a>1. 安装 MinGW 和配置环境变量</h3><p>如果还未安装 MinGW，首先需要下载安装并配置好编译器：</p>
+<ol>
+<li>下载并安装 MinGW（推荐使用 <a target="_blank" rel="noopener" href="https://www.mingw-w64.org/">MinGW-w64</a> 以获取更完整的支持）。</li>
+<li>将 MinGW 的 <code>bin</code> 文件夹路径添加到系统 <code>Path</code> 环境变量中。</li>
+</ol>
+<h3 id="2-安装-OpenGL-依赖库"><a href="#2-安装-OpenGL-依赖库" class="headerlink" title="2. 安装 OpenGL 依赖库"></a>2. 安装 OpenGL 依赖库</h3><p>要使用 OpenGL，需要安装以下几个库：</p>
+<ul>
+<li><strong>GLFW</strong> 或 <strong>GLUT</strong>：用于窗口管理和用户输入处理。</li>
+<li><strong>GLEW</strong>：用于加载 OpenGL 扩展。</li>
+</ul>
+<p>可以在下列网站下载这些库：</p>
+<ul>
+<li>GLFW：<a target="_blank" rel="noopener" href="https://www.glfw.org/download.html">GLFW 下载</a></li>
+<li>GLEW：<a target="_blank" rel="noopener" href="http://glew.sourceforge.net/">GLEW 下载</a></li>
+</ul>
+<p>本例中的GLFW选择64bit预编译版本，而GLEW选择最新版的2.2.0。<br><img src="/images/GLFW%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9.png" alt="alt text"><br>下载之后，解压并保存各库的 <code>include</code> 和 <code>lib</code> 文件夹，便于之后引用。</p>
+<h3 id="3-配置-VSCode-项目"><a href="#3-配置-VSCode-项目" class="headerlink" title="3. 配置 VSCode 项目"></a>3. 配置 VSCode 项目</h3><p>在 VSCode 中，创建项目文件夹，并配置相应的设置文件。</p>
+<h4 id="（1）创建文件结构"><a href="#（1）创建文件结构" class="headerlink" title="（1）创建文件结构"></a>（1）创建文件结构</h4><p>在本例中，项目的文件结构如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">project_folder/</span><br><span class="line">│   main.cpp                # OpenGL 程序的源文件</span><br><span class="line">└── .vscode/</span><br><span class="line">    ├── tasks.json          # 编译配置</span><br><span class="line">    └── launch.json         # 调试配置</span><br><span class="line">    └── c_cpp_properties.json # 包含路径和编译器配置</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）编写示例代码"><a href="#（2）编写示例代码" class="headerlink" title="（2）编写示例代码"></a>（2）编写示例代码</h4><p>在 <code>main.cpp</code> 文件中，添加 OpenGL 的简单示例代码，例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;GL/glew.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;GLFW/glfw3.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 顶点着色器源码</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* vertexShaderSource = <span class="string">R&quot;(</span></span><br><span class="line"><span class="string">    #version 330 core</span></span><br><span class="line"><span class="string">    layout (location = 0) in vec3 aPos;</span></span><br><span class="line"><span class="string">    void main()</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">        gl_Position = vec4(aPos, 1.0);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">)&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 片段着色器源码</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* fragmentShaderSource = <span class="string">R&quot;(</span></span><br><span class="line"><span class="string">    #version 330 core</span></span><br><span class="line"><span class="string">    out vec4 FragColor;</span></span><br><span class="line"><span class="string">    void main()</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">        FragColor = vec4(1.0, 0.5, 0.2, 1.0); // 设置颜色为橙色</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">)&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 初始化 GLFW</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">glfwInit</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建窗口</span></span><br><span class="line">    GLFWwindow* window = <span class="built_in">glfwCreateWindow</span>(<span class="number">800</span>, <span class="number">600</span>, <span class="string">&quot;OpenGL Square&quot;</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">    <span class="keyword">if</span> (!window) &#123;</span><br><span class="line">        <span class="built_in">glfwTerminate</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">glfwMakeContextCurrent</span>(window);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化 GLEW</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">glewInit</span>() != GLEW_OK) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 定义顶点数据</span></span><br><span class="line">    <span class="type">float</span> vertices[] = &#123;</span><br><span class="line">         <span class="number">0.5f</span>,  <span class="number">0.5f</span>, <span class="number">0.0f</span>, <span class="comment">// 右上角</span></span><br><span class="line">         <span class="number">0.5f</span>, <span class="number">-0.5f</span>, <span class="number">0.0f</span>, <span class="comment">// 右下角</span></span><br><span class="line">        <span class="number">-0.5f</span>, <span class="number">-0.5f</span>, <span class="number">0.0f</span>, <span class="comment">// 左下角</span></span><br><span class="line">        <span class="number">-0.5f</span>,  <span class="number">0.5f</span>, <span class="number">0.0f</span>  <span class="comment">// 左上角</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> indices[] = &#123;</span><br><span class="line">        <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="comment">// 第一个三角形</span></span><br><span class="line">        <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>  <span class="comment">// 第二个三角形</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建顶点缓冲对象 (VBO) 和顶点数组对象 (VAO)</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> VBO, VAO, EBO;</span><br><span class="line">    <span class="built_in">glGenVertexArrays</span>(<span class="number">1</span>, &amp;VAO);</span><br><span class="line">    <span class="built_in">glGenBuffers</span>(<span class="number">1</span>, &amp;VBO);</span><br><span class="line">    <span class="built_in">glGenBuffers</span>(<span class="number">1</span>, &amp;EBO);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">glBindVertexArray</span>(VAO);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">glBindBuffer</span>(GL_ARRAY_BUFFER, VBO);</span><br><span class="line">    <span class="built_in">glBufferData</span>(GL_ARRAY_BUFFER, <span class="built_in">sizeof</span>(vertices), vertices, GL_STATIC_DRAW);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">glBindBuffer</span>(GL_ELEMENT_ARRAY_BUFFER, EBO);</span><br><span class="line">    <span class="built_in">glBufferData</span>(GL_ELEMENT_ARRAY_BUFFER, <span class="built_in">sizeof</span>(indices), indices, GL_STATIC</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）配置-tasks-json"><a href="#（3）配置-tasks-json" class="headerlink" title="（3）配置 tasks.json"></a>（3）配置 <code>tasks.json</code></h4><p>在 <code>.vscode/tasks.json</code> 中配置编译任务，让 VSCode 使用 MinGW 编译程序：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build OpenGL&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g++&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span> <span class="string">&quot;main&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;main.cpp&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-I&quot;</span><span class="punctuation">,</span> <span class="string">&quot;path/to/glew/include&quot;</span><span class="punctuation">,</span>   <span class="comment">// 替换为你的 GLEW include 路径</span></span><br><span class="line">                <span class="string">&quot;-I&quot;</span><span class="punctuation">,</span> <span class="string">&quot;path/to/glfw/include&quot;</span><span class="punctuation">,</span>   <span class="comment">// 替换为你的 GLFW include 路径</span></span><br><span class="line">                <span class="string">&quot;-L&quot;</span><span class="punctuation">,</span> <span class="string">&quot;path/to/glew/lib&quot;</span><span class="punctuation">,</span>       <span class="comment">// 替换为你的 GLEW lib 路径</span></span><br><span class="line">                <span class="string">&quot;-L&quot;</span><span class="punctuation">,</span> <span class="string">&quot;path/to/glfw/lib&quot;</span><span class="punctuation">,</span>       <span class="comment">// 替换为你的 GLFW lib 路径</span></span><br><span class="line">                <span class="string">&quot;-lglfw3&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-lglew32&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-lopengl32&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-lgdi32&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将 <code>path/to/glew/include</code>、<code>path/to/glfw/include</code>、<code>path/to/glew/lib</code> 和 <code>path/to/glfw/lib</code> 替换为 GLEW 和 GLFW 的实际路径。</li>
+</ul>
+<h4 id="（4）配置-launch-json"><a href="#（4）配置-launch-json" class="headerlink" title="（4）配置 launch.json"></a>（4）配置 <code>launch.json</code></h4><p>在 <code>.vscode/launch.json</code> 中配置调试设置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch OpenGL Program&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/main&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;path/to/mingw64/bin/gdb.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="punctuation">&#123;</span></span><br><span class="line">                    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Enable pretty-printing for gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build OpenGL&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将 <code>path/to/mingw64/bin/gdb.exe</code> 替换为 MinGW 的 <code>gdb.exe</code> 实际路径。</li>
+</ul>
+<h4 id="（5）配置-c-cpp-properties-json"><a href="#（5）配置-c-cpp-properties-json" class="headerlink" title="（5）配置 c_cpp_properties.json"></a>（5）配置 <code>c_cpp_properties.json</code></h4><p>在 <code>.vscode/c_cpp_properties.json</code> 中配置包含路径：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Win32&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;path/to/glew/include&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;path/to/glfw/include&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;defines&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;path/to/mingw64/bin/g++.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;c17&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;c++17&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;windows-gcc-x64&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="number">4</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将 <code>path/to/glew/include</code> 和 <code>path/to/glfw/include</code> 替换为 GLEW 和 GLFW 的实际 <code>include</code> 路径。</li>
+<li>将 <code>path/to/mingw64/bin/g++.exe</code> 替换为 MinGW 的 <code>g++.exe</code> 实际路径。</li>
+</ul>
+<h3 id="4-编译并运行"><a href="#4-编译并运行" class="headerlink" title="4. 编译并运行"></a>4. 编译并运行</h3><p>在配置完成后，按 <code>Ctrl + Shift + B</code> 进行编译，然后按 <code>F5</code> 进行调试运行。</p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>更新于 2024-11-11</p></div> 
+    <div class="post-entry__tags"><a href="/tags/OpenGL/" class="post-tags__link button"># OpenGL</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2024/10/15/Hello/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            下一篇
+                        </div>
+                        <div class="nav__title">
+                            Hello
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2024 <a href="/">Arrowiii</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>
